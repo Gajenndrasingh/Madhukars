@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body text-ink bg-white antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-heading text-navy;
+  letter-spacing: -0.01em;
+}
+
+.container-page {
+  @apply max-w-container mx-auto px-6 md:px-8;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 whitespace-nowrap;
+}
+
+.btn-primary {
+  @apply bg-navy text-white hover:bg-gold hover:text-navy hover:-translate-y-0.5;
+}
+
+.btn-gold {
+  @apply bg-gold text-navy hover:bg-navy hover:text-white hover:-translate-y-0.5;
+}
+
+.btn-outline {
+  @apply bg-transparent border border-white/50 text-white hover:bg-gold hover:border-gold hover:text-navy;
+}
+
+.eyebrow-dark {
+  @apply flex items-center gap-2.5 text-gold text-xs font-bold tracking-[0.14em] uppercase mb-4;
+}
+
+.eyebrow-dark::before {
+  content: '';
+  @apply w-6 h-px bg-gold;
+}
+
+.section {
+  @apply py-24 md:py-28;
+}
+
+.section-alt {
+  @apply bg-surface;
+}
+
+.card {
+  @apply bg-white border border-line rounded-card p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card hover:border-transparent;
+}
+
+.icon-wrap {
+  @apply w-[52px] h-[52px] rounded-xl bg-surface flex items-center justify-center text-navy mb-5 transition-colors duration-300;
+}
+
+.card:hover .icon-wrap {
+  @apply bg-navy text-gold-light;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
