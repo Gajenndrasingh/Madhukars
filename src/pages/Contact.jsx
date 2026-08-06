@@ -6,17 +6,17 @@ const info = [
   {
     icon: HiOutlineLocationMarker,
     title: 'Office Address',
-    text: '3rd Floor, Vyapar Bhawan, Civil Lines, Jabalpur, Madhya Pradesh, India',
+    text: '38, Navkar Heights Jaora distt ratlam',
   },
   {
     icon: HiOutlinePhone,
     title: 'Phone',
-    text: '+91 98XXX XXXXX · +91 761 XXXXXXX',
+    text: '+91 8720 012162 · +91 872 0012162',
   },
   {
     icon: HiOutlineMail,
     title: 'Email',
-    text: 'contact@madhukars.in',
+    text: 'anuj.mehta@madhukars.in',
   },
   {
     icon: HiOutlineClock,
@@ -54,10 +54,16 @@ export default function Contact() {
                 </div>
               ))}
 
-              <div className="mt-6 rounded-card overflow-hidden aspect-[16/10] bg-gradient-to-br from-surface to-[#eef0f2] border border-line flex items-center justify-center text-muted text-sm relative">
-                <HiOutlineLocationMarker className="text-gold mr-2" size={22} />
-                Google Map — Madhukars Office, Jabalpur
-              </div>
+              <div className="mt-6 rounded-card overflow-hidden aspect-[16/10] border border-line">
+  <iframe
+    title="Office Location"
+    src="https://www.google.com/maps?q=38,Navkar%20Heights,Jaora,Ratlam,Madhya%20Pradesh&output=embed"
+    className="w-full h-full"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
             </div>
           </Reveal>
 

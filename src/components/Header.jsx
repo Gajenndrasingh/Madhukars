@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { navLinks } from '../data/content'
+import logo from '../assets/logo.png'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -40,17 +41,13 @@ export default function Header() {
       }`}
     >
       <div className="container-page flex items-center justify-between">
-        <NavLink
-          to="/"
-          className={`flex items-center gap-2.5 font-heading font-bold text-xl transition-colors duration-300 ${
-            solid ? 'text-navy' : 'text-white'
-          }`}
-        >
-          <span className="w-9 h-9 rounded-lg bg-gradient-to-br from-gold to-gold-light flex items-center justify-center text-navy font-extrabold text-base shrink-0">
-            M
-          </span>
-          Madhukars
-        </NavLink>
+        <NavLink to="/" className="flex items-center shrink-0">
+  <img
+    src={logo}
+    alt="Madhukar Associates"
+    className={`w-auto transition-all duration-300 ${solid ? 'h-16' : 'h-20'}`}
+  />
+</NavLink>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-9">

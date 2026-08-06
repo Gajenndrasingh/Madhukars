@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import { FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { navLinks } from '../data/content'
+import logo from '../assets/logo.png'
+
 
 export default function Footer() {
   return (
@@ -8,10 +10,7 @@ export default function Footer() {
       <div className="container-page">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-14 border-b border-white/10">
           <div>
-            <div className="flex items-center gap-2.5 font-heading font-bold text-xl text-white mb-4">
-              <span className="w-[34px] h-[34px] rounded-lg bg-gradient-to-br from-gold to-gold-light flex items-center justify-center text-navy font-extrabold text-sm">M</span>
-              Madhukars
-            </div>
+            <img src={logo} alt="Madhukar Associates" className="h-[100px] w-auto mb-4" />
             <p className="text-sm max-w-xs">Independent property valuation advisory for individuals, institutions and government bodies.</p>
           </div>
 
@@ -41,9 +40,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white text-sm font-semibold mb-5 tracking-wide">Contact</h4>
             <ul className="space-y-3 text-sm text-white/65">
-              <li>Civil Lines, Jabalpur, MP</li>
-              <li>contact@madhukars.in</li>
-              <li>+91 98XXX XXXXX</li>
+              <li>38, Navkar Heights Jaora distt ratlam</li>
+              <li>anuj.mehta@madhukars.in</li>
+              <li>+91 8720012162</li>
             </ul>
           </div>
         </div>
