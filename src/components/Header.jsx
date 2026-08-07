@@ -34,20 +34,25 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
-        solid
-          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_rgba(10,37,64,0.08)] py-2.5"
-          : "bg-transparent py-4"
-      }`}
-    >
-      <div className="container-page flex items-center justify-between">
-        <NavLink to="/" className="flex items-center shrink-0">
-          <img
-            src={logo}
-            alt="Madhukar Associates"
-            className={`w-auto transition-all duration-300 ${solid ? "h-24" : "h-28"}`}
-          />
-        </NavLink>
+  className={`fixed top-0 left-0 right-0 z-[1000] h-20 transition-all duration-300 ${
+    solid
+      ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_rgba(10,37,64,0.08)]"
+      : "bg-transparent"
+  }`}
+>
+  <div className="container-page h-20 flex items-center justify-between">
+
+    <NavLink to="/" className="flex items-center shrink-0 -my-6">
+      <img
+        src={logo}
+        alt="Madhukar Associates"
+        className={`w-auto object-contain transition-all duration-300 ${
+          solid ? "h-32" : "h-36"
+        }`}
+      />
+    </NavLink>
+
+    {/* baaki code */}
 
         {/* Desktop nav */}
         <div className="hidden md:flex flex-1 items-center">

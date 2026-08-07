@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container-page">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-14 border-b border-white/10">
           <div>
-            <img src={logo} alt="Madhukar Associates" className="h-[100px] w-auto mb-4" />
+            <img src={logo} alt="Madhukar Associates" className="h-[150px] w-auto mb-4" />
             <p className="text-sm max-w-xs">Independent property valuation advisory for individuals, institutions and government bodies.</p>
           </div>
 
