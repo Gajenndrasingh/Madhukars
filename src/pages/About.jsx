@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Reveal from '../components/Reveal'
 import { coreValues, timeline, proprietor, serviceAreas } from '../data/content'
-import anujPhoto from '../assets/anuj-mehta.jpg'
+import anujPhoto from '../assets/anuj-mehta.png'
 
 export default function About() {
   return (
@@ -87,10 +87,19 @@ export default function About() {
         {/* Proprietor */}
         <div className="grid md:grid-cols-2 gap-16 items-center mt-24">
           <Reveal direction="left">
-            <div className="relative rounded-card overflow-hidden aspect-[4/3.1] bg-gradient-to-br from-navy to-navy-soft flex items-center justify-center">
-              <img src={anujPhoto} alt={proprietor.name} className="h-full w-auto object-cover" />
-            </div>
-          </Reveal>
+    <div className="relative rounded-card overflow-hidden aspect-[3/4] bg-navy max-w-[340px] mx-auto md:mx-0">
+      <img
+        src={anujPhoto}
+        alt={proprietor.name}
+        className="absolute inset-0 h-full w-full object-cover object-top"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+      <div className="absolute bottom-5 left-5 right-5">
+        <p className="text-white font-heading font-semibold text-lg">{proprietor.name}</p>
+        <p className="text-white/70 text-sm">{proprietor.title}</p>
+      </div>
+    </div>
+  </Reveal>
           <Reveal direction="right">
             <div className="eyebrow-dark">Proprietor</div>
             <h2 className="text-xl md:text-2xl mb-1">{proprietor.name}</h2>

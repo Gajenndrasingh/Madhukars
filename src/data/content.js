@@ -48,7 +48,7 @@ export const coreValues = [
 ]
 
 export const timeline = [
-  { year: '2014', title: 'Practice founded', desc: 'Started as an independent valuation practice serving residential and small commercial clients.' },
+  { year: '2015', title: 'Practice founded', desc: 'Started as an independent valuation practice serving residential and small commercial clients.' },
   { year: '2017', title: 'Empanelled with leading banks', desc: 'Added to approved valuer panels for major public and private sector banks.' },
   { year: '2020', title: 'Industrial & agricultural expansion', desc: 'Extended coverage to industrial units, plant & machinery, and agricultural land.' },
   { year: '2023', title: '4,000th report delivered', desc: 'Crossed a milestone of assignments completed across residential, commercial and institutional clients.' },
