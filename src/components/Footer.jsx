@@ -33,14 +33,14 @@ export default function Footer() {
               <li>Residential Valuation</li>
               <li>Commercial Valuation</li>
               <li>Bank Loan Valuation</li>
-              <li>Agricultural Land</li>
+              <li>Land and Building</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white text-sm font-semibold mb-5 tracking-wide">Contact</h4>
             <ul className="space-y-3 text-sm text-white/65">
-              <li>38, Navkar Heights Jaora distt ratlam</li>
+              <li>Jaora, Distt Ratlam, MP</li>
               <li>anuj.mehta@madhukars.in</li>
               <li>+91 8720012162</li>
             </ul>

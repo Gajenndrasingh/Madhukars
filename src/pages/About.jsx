@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Reveal from '../components/Reveal'
-import { coreValues, timeline } from '../data/content'
+import { coreValues, timeline, proprietor, serviceAreas } from '../data/content'
+import anujPhoto from '../assets/anuj-mehta.jpg'
 
 export default function About() {
   return (
@@ -8,10 +9,10 @@ export default function About() {
       <div className="container-page">
         <Reveal>
           <div className="max-w-xl mb-16">
-            <div className="eyebrow-dark">About Madhukars</div>
-            <h2 className="text-2xl md:text-3xl">Two decades of disciplined, independent valuation</h2>
+            <div className="eyebrow-dark">About Madhukar Associates</div>
+            <h2 className="text-2xl md:text-3xl">12 years of disciplined, independent valuation</h2>
             <p className="text-muted mt-4">
-              Madhukars Property Valuers was founded on a simple principle: a valuation report is only useful if
+              Madhukar Associates was founded on a simple principle: a valuation report is only useful if
               it is accurate, defensible and delivered on time. That principle still guides every assignment we
               take on today.
             </p>
@@ -83,34 +84,40 @@ export default function About() {
           </Reveal>
         </div>
 
-        {/* Team */}
+        {/* Proprietor */}
         <div className="grid md:grid-cols-2 gap-16 items-center mt-24">
           <Reveal direction="left">
-            <div className="relative rounded-card overflow-hidden aspect-[4/3.1] bg-gradient-to-br from-navy to-navy-soft">
-              <div
-                className="absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px)',
-                  backgroundSize: '34px 34px',
-                }}
-              />
-              <div className="absolute bottom-5 left-5 bg-white rounded-card-sm px-5 py-4 shadow-card flex items-center gap-3">
-                <div className="font-heading font-bold text-2xl text-navy">100%</div>
-                <div className="text-xs text-muted leading-snug">Site-inspected<br />before reporting</div>
-              </div>
+            <div className="relative rounded-card overflow-hidden aspect-[4/3.1] bg-gradient-to-br from-navy to-navy-soft flex items-center justify-center">
+              <img src={anujPhoto} alt={proprietor.name} className="h-full w-auto object-cover" />
             </div>
           </Reveal>
           <Reveal direction="right">
-            <div className="eyebrow-dark">Our Team</div>
-            <h2 className="text-xl md:text-2xl mb-4">Experienced, certified, independent</h2>
-            <p className="text-muted mb-6">
-              Our valuers combine formal qualification with years of on-ground market experience across
-              residential, commercial, industrial and agricultural segments — so every report reflects both
-              method and market reality.
-            </p>
+            <div className="eyebrow-dark">Proprietor</div>
+            <h2 className="text-xl md:text-2xl mb-1">{proprietor.name}</h2>
+            <p className="text-gold text-sm font-semibold mb-4">{proprietor.role}</p>
+            <p className="text-muted mb-6">{proprietor.bio}</p>
             <NavLink to="/contact" className="btn btn-primary">Talk to Our Team</NavLink>
           </Reveal>
+        </div>
+
+        {/* Service Areas */}
+        <div className="mt-24">
+          <Reveal>
+            <div className="max-w-xl mx-auto text-center mb-14">
+              <div className="eyebrow-dark justify-center">Serviceable Areas</div>
+              <h2 className="text-2xl md:text-3xl">Covering 12 districts across Madhya Pradesh</h2>
+            </div>
+          </Reveal>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {serviceAreas.map((s, i) => (
+              <Reveal key={s.district} delay={i * 0.04}>
+                <div className="rounded-card border border-line p-5 h-full">
+                  <h4 className="text-base font-semibold text-navy mb-1.5">{s.district}</h4>
+                  <p className="text-muted text-sm">{s.areas}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

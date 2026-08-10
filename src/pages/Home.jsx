@@ -6,7 +6,7 @@ import LogoGrid from '../components/LogoGrid'
 import CTASection from '../components/CTASection'
 import StatCounter from '../components/StatCounter'
 import { HiCheck } from 'react-icons/hi'
-import { services, whyChooseHome, clientTypesHome, stats } from '../data/content'
+import { services, solutions, whyChooseHome, clientTypesHome, stats } from '../data/content'
 
 export default function Home() {
   return (
@@ -48,21 +48,32 @@ export default function Home() {
             Financial Institutions — delivered with precision, transparency and speed.
           </p>
           <div className="mt-10 flex gap-4 flex-wrap">
-            <NavLink to="/contact" className="btn btn-gold">Contact Us</NavLink>
+            <NavLink to="/contact" className="btn btn-gold">
+              Contact Us
+            </NavLink>
+
             <a
               href="#services-preview"
               className="btn btn-outline"
               onClick={(e) => {
                 e.preventDefault()
-                document.getElementById('services-preview')?.scrollIntoView({ behavior: 'smooth' })
+                document.getElementById('services-preview')?.scrollIntoView({
+                  behavior: 'smooth',
+                })
               }}
             >
               Our Services
             </a>
           </div>
+
           <div className="mt-20 pt-9 border-t border-white/15 flex flex-wrap gap-14">
             {stats.map((s) => (
-              <StatCounter key={s.label} value={s.value} suffix={s.suffix} label={s.label} />
+              <StatCounter
+                key={s.label}
+                value={s.value}
+                suffix={s.suffix}
+                label={s.label}
+              />
             ))}
           </div>
         </div>
@@ -90,16 +101,16 @@ export default function Home() {
                 <rect x="340" y="120" width="40" height="80" fill="rgba(255,255,255,0.12)" />
               </svg>
               <div className="absolute bottom-5 left-5 bg-white rounded-card-sm px-5 py-4 shadow-card flex items-center gap-3">
-                <div className="font-heading font-bold text-2xl text-navy">18+</div>
+                <div className="font-heading font-bold text-2xl text-navy">12+</div>
                 <div className="text-xs text-muted leading-snug">Years guiding<br />property decisions</div>
               </div>
             </div>
           </Reveal>
           <Reveal direction="right">
-            <div className="eyebrow-dark">About Madhukars</div>
+            <div className="eyebrow-dark">About Madhukar Associates</div>
             <h2 className="text-2xl md:text-3xl mb-5">Independent valuation advice you can build decisions on</h2>
             <p className="text-muted mb-4">
-              Madhukars Property Valuers is an independent valuation practice serving individuals, builders,
+              Madhukar Associates is an independent valuation practice serving individuals, builders,
               corporates, banks and government bodies. Every report we issue is grounded in site inspection,
               verified data and defensible methodology — not guesswork.
             </p>
@@ -135,6 +146,33 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, i) => (
               <ServiceCard key={s.title} icon={s.icon} title={s.title} desc={s.desc} delay={(i % 4) * 0.06} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SOLUTIONS */}
+      <section className="section">
+        <div className="container-page">
+          <Reveal>
+            <div className="max-w-xl mx-auto text-center mb-16">
+              <div className="eyebrow-dark justify-center">Our Solutions</div>
+              <h2 className="text-2xl md:text-3xl">Beyond valuation — full-spectrum civil engineering support</h2>
+              <p className="text-muted mt-4">
+                As trusted solution providers, we work across five core areas so clients can rely on one team
+                from valuation right through to construction.
+              </p>
+            </div>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {solutions.map((s, i) => (
+              <Reveal key={s.title} delay={(i % 5) * 0.06}>
+                <div className="rounded-card border border-line p-6 h-full">
+                  <div className="text-gold font-heading font-bold text-sm mb-2">0{i + 1}</div>
+                  <h4 className="text-base font-semibold mb-2">{s.title}</h4>
+                  <p className="text-muted text-sm">{s.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>

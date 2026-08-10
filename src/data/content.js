@@ -48,10 +48,10 @@ export const coreValues = [
 ]
 
 export const timeline = [
-  { year: '2007', title: 'Practice founded', desc: 'Started as an independent valuation practice serving residential and small commercial clients.' },
-  { year: '2012', title: 'Empanelled with leading banks', desc: 'Added to approved valuer panels for major public and private sector banks.' },
-  { year: '2017', title: 'Industrial & agricultural expansion', desc: 'Extended coverage to industrial units, plant & machinery, and agricultural land.' },
-  { year: '2022', title: '4,000th report delivered', desc: 'Crossed a milestone of assignments completed across residential, commercial and institutional clients.' },
+  { year: '2014', title: 'Practice founded', desc: 'Started as an independent valuation practice serving residential and small commercial clients.' },
+  { year: '2017', title: 'Empanelled with leading banks', desc: 'Added to approved valuer panels for major public and private sector banks.' },
+  { year: '2020', title: 'Industrial & agricultural expansion', desc: 'Extended coverage to industrial units, plant & machinery, and agricultural land.' },
+  { year: '2023', title: '4,000th report delivered', desc: 'Crossed a milestone of assignments completed across residential, commercial and institutional clients.' },
   { year: 'Today', title: 'A trusted regional practice', desc: 'Serving banks, NBFCs, developers, corporates and individual clients with the same discipline we started with.' },
 ]
 
@@ -73,9 +73,9 @@ export const faqs = [
 ]
 
 export const stats = [
-  { value: 18, suffix: '', label: 'Years of Practice' },
+  { value: 12, suffix: '', label: 'Years of Practice' },
   { value: 4200, suffix: '+', label: 'Reports Delivered' },
-  { value: 30, suffix: '+', label: 'Banks & NBFCs Trust Us' },
+  { value: 22, suffix: '+', label: 'Banks & NBFCs Trust Us' },
   { value: 98, suffix: '%', label: 'Client Retention' },
 ]
 
@@ -87,3 +87,64 @@ export const navLinks = [
   { to: '/contact', label: 'Contact' },
 ]
 
+export const proprietor = {
+  name: 'Er. Anuj Mehta',
+  role: 'Proprietor & Principal Valuer',
+  bio: 'A civil engineer with a Bachelor of Engineering (2015) and approx. 12 years of experience in property valuation. Anuj works across multiple locations in Madhya Pradesh and Rajasthan, handling everything from field visits and valuation reports to managing teams and engaging with banking officers.',
+}
+
+export const solutions = [
+  { title: 'Valuation', desc: 'Real estate valuations across land, residential, industrial and commercial assets, including mortgage valuations and LAP (loan against property) assignments for financial institutions.' },
+  { title: 'Cost-Estimation', desc: 'Cost estimations for construction programs, projects and operations — maintained to standards of credibility, accuracy, precision and validity.' },
+  { title: 'Planning', desc: 'Construction plans for industrial, commercial and residential plots and buildings, adhering to local authority bylaws and vaastu considerations.' },
+  { title: 'Designing', desc: 'Structural design for construction projects, applying mechanics, materials science and applied mathematics — including environmental loads like earthquakes and wind.' },
+  { title: 'Construction', desc: 'Small-scale residential and commercial construction projects, delivered with the same integrity we bring to every valuation report.' },
+]
+
+export const serviceAreas = [
+  { district: 'Ratlam', areas: 'Jaora, Alote, Bajna, Sailana' },
+  { district: 'Mandsaur', areas: 'Shamgarh, Suwasra, Garoth, Malhargarh, Daloda' },
+  { district: 'Neemuch', areas: 'Manasa, Singoli, Jeeran, Jawad' },
+  { district: 'Agar', areas: 'Susner, Barode, Nalkheda' },
+  { district: 'Rajgarh', areas: 'Biaora, Sarangpur, Pachore, Sarangpur' },
+  { district: 'Shajapur', areas: 'Shujalpur, Akodia, Kalapipal, Mohan Barodiya' },
+  { district: 'Ujjain', areas: 'Nagda, Badnagar, Tarana, Mahidpur' },
+  { district: 'Dewas', areas: 'Sonkatchh, Tonk khurd, Hatpipliya' },
+  { district: 'Dhar', areas: 'Badnawar, Sardarpur, Pithampur' },
+  { district: 'Jhabua', areas: 'Meghnagar, Thandla, Petlawad' },
+  { district: 'Alirajpur', areas: 'Jobat, Bhavra' },
+  { district: 'Sehore', areas: 'Ashta, Kurawar' },
+]
+
+export const empanelledWith = [
+  'Bandhan Bank Ltd – GRUH Center', 'DCB Bank Ltd', 'IndusInd Bank Ltd', 'Fedbank Financial Services Ltd',
+  'PNB Housing Finance Ltd', 'Aadhar Housing Finance Ltd', 'Ummeed Housing Finance Pvt Ltd',
+  'Cholamandalam Investment and Finance Company Ltd', 'Bajaj Housing Finance Limited', 'JM Financial Home Loans Ltd',
+  'Shubham Housing Development Finance Company Ltd', 'Muthoot Fincorp Ltd', 'Muthoot Finance Ltd',
+  'Muthoot Housing Finance Ltd', 'Western Capital Ltd', 'L&T Financial Services', 'Purple Finance Ltd',
+  'IIFCO Kisan Finance Ltd', 'Bhala Finance Pvt Ltd', 'Nipun Projectes and Finance Pvt Ltd',
+  'MS Fincap Pvt Ltd', 'KIFS Housing Finance Ltd',
+]
+
+export const references = [
+  { name: 'Mr. Atul Shukla', role: 'RTM in Indusind Bank', phone: '+91 9407322430' },
+  { name: 'Mr. Shubham Shekhar', role: 'RTM in PNBHFL', phone: '+91 8950580205' },
+  { name: 'Mr. Abhay Pal', role: 'State Tech Head in Ummeed Finance', phone: '+91 9522266636' },
+  { name: 'Mr. Nikhil Junnare', role: 'Tech Head in KIFS', phone: '+91 9424584836' },
+  { name: 'Mr. Dharmendra Chouhan', role: 'Tech Head in JM Finance', phone: '+91 9165822553' },
+  { name: 'Mr. Mahesh Kothe', role: 'Tech Head in Hero Finance', phone: '+91 8889107494' },
+]
+
+export const officeLocations = [
+  {
+    label: 'Registered Office',
+    address: '38, Navkar Heights Colony, Behind Bajaj Showroom, Jaora, Distt Ratlam-457226, Madhya Pradesh',
+  },
+  {
+    label: 'Ujjain Branch',
+    address: 'Janki Nagar, Gadkalika Main Road, Ujjain (MP)',
+    contactPerson: 'Mr. Parivesh Prajapati',
+    phone: '+91 9340288331',
+    email: 'ujjain@madhukars.in',
+  },
+]

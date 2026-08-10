@@ -2,7 +2,8 @@ import Reveal from '../components/Reveal'
 import LogoGrid from '../components/LogoGrid'
 import TestimonialCard from '../components/TestimonialCard'
 import FAQAccordion from '../components/FAQAccordion'
-import { clientTypesFull, testimonials, faqs } from '../data/content'
+import { clientTypesFull, testimonials, faqs, empanelledWith, references } from '../data/content'
+import { HiOutlinePhone } from 'react-icons/hi'
 
 export default function Clients() {
   return (
@@ -19,6 +20,42 @@ export default function Clients() {
           </div>
         </Reveal>
         <LogoGrid items={clientTypesFull} />
+
+        {/* Empanelled With */}
+        <Reveal>
+          <div className="max-w-xl mx-auto text-center mt-24 mb-14">
+            <div className="eyebrow-dark justify-center">Currently Empanelled With</div>
+            <h2 className="text-2xl md:text-3xl">{empanelledWith.length}+ banks &amp; NBFCs trust our reports</h2>
+          </div>
+        </Reveal>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {empanelledWith.map((name) => (
+            <div key={name} className="rounded-card-sm border border-line px-5 py-4 text-sm text-ink">
+              {name}
+            </div>
+          ))}
+        </div>
+
+        {/* References */}
+        <Reveal>
+          <div className="max-w-xl mx-auto text-center mt-24 mb-14">
+            <div className="eyebrow-dark justify-center">References</div>
+            <h2 className="text-2xl md:text-3xl">Bank &amp; NBFC contacts we've worked closely with</h2>
+          </div>
+        </Reveal>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {references.map((r, i) => (
+            <Reveal key={r.name} delay={i * 0.05}>
+              <div className="rounded-card border border-line p-6 h-full">
+                <h4 className="text-base font-semibold">{r.name}</h4>
+                <p className="text-muted text-sm mt-1">{r.role}</p>
+                <p className="text-sm mt-3 flex items-center gap-2 text-navy font-medium">
+                  <HiOutlinePhone /> {r.phone}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
 
         <Reveal>
           <div className="max-w-xl mx-auto text-center mt-24 mb-16">
