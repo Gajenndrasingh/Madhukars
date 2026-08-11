@@ -4,22 +4,24 @@ import TestimonialCard from '../components/TestimonialCard'
 import FAQAccordion from '../components/FAQAccordion'
 import { clientTypesFull, testimonials, faqs, empanelledWith, references } from '../data/content'
 import { HiOutlinePhone } from 'react-icons/hi'
+import ClientLogos from '../components/ClientLogos'
 
 export default function Clients() {
   return (
     <section className="section" style={{ paddingTop: '150px' }}>
       <div className="container-page">
-        <Reveal>
-          <div className="max-w-xl mx-auto text-center mb-16">
-            <div className="eyebrow-dark justify-center">Our Clients</div>
-            <h2 className="text-2xl md:text-3xl">Across sectors, one consistent standard</h2>
-            <p className="text-muted mt-4">
-              We serve every category of client with the same rigour — whether the assignment is a single home
-              loan or an institutional portfolio.
-            </p>
-          </div>
-        </Reveal>
-        <LogoGrid items={clientTypesFull} />
+       <Reveal>
+  <div className="max-w-xl mx-auto text-center mb-16">
+    <div className="eyebrow-dark justify-center">Our Clients</div>
+    <h2 className="text-2xl md:text-3xl">Across sectors, one consistent standard</h2>
+    <p className="text-muted mt-4">
+      We serve every category of client with the same rigour — whether the assignment is a single home
+      loan or an institutional portfolio.
+    </p>
+  </div>
+</Reveal>
+<LogoGrid items={clientTypesFull} />
+<ClientLogos />
 
         {/* Empanelled With */}
         <Reveal>
@@ -49,9 +51,9 @@ export default function Clients() {
               <div className="rounded-card border border-line p-6 h-full">
                 <h4 className="text-base font-semibold">{r.name}</h4>
                 <p className="text-muted text-sm mt-1">{r.role}</p>
-                <p className="text-sm mt-3 flex items-center gap-2 text-navy font-medium">
+                {/* <p className="text-sm mt-3 flex items-center gap-2 text-navy font-medium">
                   <HiOutlinePhone /> {r.phone}
-                </p>
+                </p> */}
               </div>
             </Reveal>
           ))}

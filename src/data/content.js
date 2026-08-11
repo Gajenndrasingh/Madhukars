@@ -5,8 +5,39 @@ import {
   HiOutlineBadgeCheck, HiOutlineStar,
   HiOutlineChartSquareBar, HiOutlineCube,
 } from 'react-icons/hi'
+
 import { GiFactory, GiPlantRoots } from 'react-icons/gi'
 import { FaHandshake, FaBullseye } from 'react-icons/fa'
+import banksIcon from '../assets/icons/banks.png'
+import financialIcon from '../assets/icons/financial-institutions.png'
+import buildersIcon from '../assets/icons/builders-developers.png'
+import corporateIcon from '../assets/icons/corporate-companies.png'
+import govtIcon from '../assets/icons/government-organisations.png'
+import individualIcon from '../assets/icons/individual-clients.png'
+import nbfcIcon from '../assets/icons/nbfc.png'
+import housingFinanceIcon from '../assets/icons/housingFinance.png'
+import insuranceIcon from '../assets/icons/insurance.png'
+
+export const clientTypesHome = [
+  { label: 'Banks', icon: banksIcon },
+  { label: 'Financial Institutions', icon: financialIcon },
+  { label: 'Builders & Developers', icon: buildersIcon },
+  { label: 'Corporate Companies', icon: corporateIcon },
+  { label: 'Government Organisations', icon: govtIcon },
+  { label: 'Individual Clients', icon: individualIcon },
+]
+
+export const clientTypesFull = [
+  { label: 'Banks', icon: banksIcon },
+  { label: 'Builders', icon: buildersIcon },
+  { label: 'Corporate Companies', icon: corporateIcon },
+  { label: 'Government Departments', icon: govtIcon },
+  { label: 'Individual Clients', icon: individualIcon },
+  { label: 'NBFC', icon: nbfcIcon },
+  { label: 'Housing Finance Companies', icon: housingFinanceIcon },
+  // { label: 'Developers', icon: developersIcon },
+  { label: 'Insurance Companies', icon: insuranceIcon },
+]
 
 export const services = [
   { icon: HiOutlineHome, title: 'Residential Property Valuation', desc: 'Flats, independent homes and residential plots valued for sale, purchase, loan or legal purposes.' },
@@ -55,9 +86,9 @@ export const timeline = [
   { year: 'Today', title: 'A trusted regional practice', desc: 'Serving banks, NBFCs, developers, corporates and individual clients with the same discipline we started with.' },
 ]
 
-export const clientTypesHome = ['Banks', 'Financial Institutions', 'Builders & Developers', 'Corporate Companies', 'Government Organisations', 'Individual Clients']
+// export const clientTypesHome = ['Banks', 'Financial Institutions', 'Builders & Developers', 'Corporate Companies', 'Government Organisations', 'Individual Clients']
 
-export const clientTypesFull = ['Banks', 'NBFC', 'Housing Finance Companies', 'Builders', 'Developers', 'Corporate Companies', 'Government Departments', 'Individual Clients', 'Insurance Companies']
+// export const clientTypesFull = ['Banks', 'NBFC', 'Housing Finance Companies', 'Builders', 'Developers', 'Corporate Companies', 'Government Departments', 'Individual Clients', 'Insurance Companies']
 
 export const testimonials = [
   { name: 'R. Sharma', role: 'Branch Manager, Regional Bank', quote: 'Reports are consistently thorough and delivered on schedule — makes loan processing far smoother.' },

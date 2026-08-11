@@ -7,6 +7,7 @@ import CTASection from '../components/CTASection'
 import StatCounter from '../components/StatCounter'
 import { HiCheck } from 'react-icons/hi'
 import { services, solutions, whyChooseHome, clientTypesHome, stats } from '../data/content'
+import ClientLogos from '../components/ClientLogos'
 
 export default function Home() {
   return (
@@ -196,17 +197,31 @@ export default function Home() {
       </section>
 
       {/* CLIENTS */}
-      <section className="section section-alt">
-        <div className="container-page">
-          <Reveal>
-            <div className="max-w-xl mx-auto text-center mb-16">
-              <div className="eyebrow-dark justify-center">Our Clients</div>
-              <h2 className="text-2xl md:text-3xl">Trusted by institutions and individuals alike</h2>
-            </div>
-          </Reveal>
-          <LogoGrid items={clientTypesHome} />
-        </div>
-      </section>
+<section className="section section-alt">
+  <div className="container-page">
+    <Reveal>
+      <div className="max-w-xl mx-auto text-center mb-16">
+        <div className="eyebrow-dark justify-center">Our Clients</div>
+        <h2 className="text-2xl md:text-3xl">Trusted by institutions and individuals alike</h2>
+      </div>
+    </Reveal>
+    <LogoGrid items={clientTypesHome} />
+    {/* <ClientLogos /> */}
+     <div className="mt-14 text-center">
+        <p className="text-muted mb-4">
+          Explore Our Clients
+        </p>
+
+        <NavLink
+          to="/clients"
+          className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-full font-semibold hover:bg-navy-soft transition-colors"
+        >
+          View All Clients
+          <span aria-hidden="true">→</span>
+        </NavLink>
+      </div>
+  </div>
+</section>
 
       {/* CTA */}
       <section className="section">
