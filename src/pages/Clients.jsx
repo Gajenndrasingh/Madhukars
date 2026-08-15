@@ -4,7 +4,6 @@ import TestimonialCard from '../components/TestimonialCard'
 import FAQAccordion from '../components/FAQAccordion'
 import { clientTypesFull, testimonials, faqs, empanelledWith, references } from '../data/content'
 import { HiOutlinePhone } from 'react-icons/hi'
-import ClientLogos from '../components/ClientLogos'
 
 export default function Clients() {
   return (
@@ -21,7 +20,6 @@ export default function Clients() {
   </div>
 </Reveal>
 <LogoGrid items={clientTypesFull} />
-<ClientLogos />
 
         {/* Empanelled With */}
         <Reveal>

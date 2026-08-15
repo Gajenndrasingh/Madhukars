@@ -7,7 +7,6 @@ import CTASection from '../components/CTASection'
 import StatCounter from '../components/StatCounter'
 import { HiCheck } from 'react-icons/hi'
 import { services, solutions, whyChooseHome, clientTypesHome, stats } from '../data/content'
-import ClientLogos from '../components/ClientLogos'
 
 export default function Home() {
   return (
@@ -206,7 +205,6 @@ export default function Home() {
       </div>
     </Reveal>
     <LogoGrid items={clientTypesHome} />
-    {/* <ClientLogos /> */}
      <div className="mt-14 text-center">
         <p className="text-muted mb-4">
           Explore Our Clients

@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { HiCheck } from 'react-icons/hi'
 
 export default function ContactForm() {
@@ -10,12 +11,31 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm()
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [sendError, setSendError] = useState(false)
+  const form = useRef()
 
-  const onSubmit = (data) => {
-    // TODO: wire this up to your email service / API endpoint
-    console.log('Contact form submission', data)
-    setSubmitted(true)
-    reset()
+  const onSubmit = () => {
+    setSending(true)
+    setSendError(false)
+
+    emailjs
+      .sendForm(
+        'service_wzzzmeu',
+        'template_7gg5nzv',
+        form.current,
+        { publicKey: 'p_ByazsJ_kxkIstC7' }
+      )
+      .then(() => {
+        setSending(false)
+        setSubmitted(true)
+        reset()
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error)
+        setSending(false)
+        setSendError(true)
+      })
   }
 
   if (submitted) {
@@ -38,24 +58,48 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white border border-line rounded-card p-8 md:p-10 shadow-soft">
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form ref={form} onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="mb-5">
             <label className="block text-sm font-semibold mb-2 text-navy">Full Name</label>
             <input
               className={`${inputClass} ${errors.name ? 'border-red-400' : 'border-line'}`}
               placeholder="Your full name"
-              {...register('name', { required: true })}
+              {...register('name', {
+                required: 'Name is required',
+                minLength: { value: 2, message: 'Name is too short' },
+                pattern: {
+                  value: /^[A-Za-z\s.]+$/,
+                  message: 'Only letters allowed',
+                },
+              })}
             />
+            {errors.name && (
+              <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>
+            )}
           </div>
           <div className="mb-5">
             <label className="block text-sm font-semibold mb-2 text-navy">Mobile Number</label>
             <input
               type="tel"
+              inputMode="numeric"
+              maxLength={10}
               className={`${inputClass} ${errors.mobile ? 'border-red-400' : 'border-line'}`}
-              placeholder="+91"
-              {...register('mobile', { required: true })}
+              placeholder="10-digit mobile number"
+              {...register('mobile', {
+                required: 'Mobile number is required',
+                pattern: {
+                  value: /^[6-9]\d{9}$/,
+                  message: 'Enter a valid 10-digit mobile number',
+                },
+              })}
+              onInput={(e) => {
+                e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10)
+              }}
             />
+            {errors.mobile && (
+              <p className="text-xs text-red-500 mt-1">{errors.mobile.message}</p>
+            )}
           </div>
         </div>
 
@@ -65,8 +109,17 @@ export default function ContactForm() {
             type="email"
             className={`${inputClass} ${errors.email ? 'border-red-400' : 'border-line'}`}
             placeholder="you@email.com"
-            {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+            {...register('email', {
+              required: 'Email is required',
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: 'Enter a valid email address',
+              },
+            })}
           />
+          {errors.email && (
+            <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>
+          )}
         </div>
 
         <div className="mb-5">
@@ -88,8 +141,14 @@ export default function ContactForm() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary w-full">
-          Send Message
+        {sendError && (
+          <p className="text-sm text-red-500 mb-3">
+            Something went wrong sending your message. Please try again.
+          </p>
+        )}
+
+        <button type="submit" className="btn btn-primary w-full" disabled={sending}>
+          {sending ? 'Sending...' : 'Send Message'}
         </button>
         <p className="text-xs text-muted mt-4">
           We respond to every enquiry within one business day. Your details stay confidential.

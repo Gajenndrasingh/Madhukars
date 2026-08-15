@@ -148,7 +148,8 @@ export const serviceAreas = [
 ]
 
 export const empanelledWith = [
-  'Bandhan Bank Ltd – GRUH Center', 'DCB Bank Ltd', 'IndusInd Bank Ltd', 'Fedbank Financial Services Ltd',
+  // 'Bandhan Bank Ltd – GRUH Center', 'DCB Bank Ltd', 'IndusInd Bank Ltd',
+   'Fedbank Financial Services Ltd',
   'PNB Housing Finance Ltd', 'Aadhar Housing Finance Ltd', 'Ummeed Housing Finance Pvt Ltd',
   'Cholamandalam Investment and Finance Company Ltd', 'Bajaj Housing Finance Limited', 'JM Financial Home Loans Ltd',
   'Shubham Housing Development Finance Company Ltd', 'Muthoot Fincorp Ltd', 'Muthoot Finance Ltd',
