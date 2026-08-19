@@ -106,7 +106,7 @@ export const faqs = [
 export const stats = [
   { value: 12, suffix: '', label: 'Years of Practice' },
   { value: 4200, suffix: '+', label: 'Reports Delivered' },
-  { value: 22, suffix: '+', label: 'Banks & NBFCs Trust Us' },
+  { value: 25, suffix: '+', label: 'Banks & NBFCs Trust Us' },
   { value: 98, suffix: '%', label: 'Client Retention' },
 ]
 

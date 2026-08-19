@@ -25,7 +25,7 @@ export default function Clients() {
         <Reveal>
           <div className="max-w-xl mx-auto text-center mt-24 mb-14">
             <div className="eyebrow-dark justify-center">Currently Empanelled With</div>
-            <h2 className="text-2xl md:text-3xl">{empanelledWith.length}+ banks &amp; NBFCs trust our reports</h2>
+            <h2 className="text-2xl md:text-3xl">25 + working with 40+ Empaneled</h2>
           </div>
         </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

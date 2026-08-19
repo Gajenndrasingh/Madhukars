@@ -21,10 +21,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        'service_wzzzmeu',
-        'template_7gg5nzv',
+        'service_5ohpf9m',
+        'template_lae8kbx',
         form.current,
-        { publicKey: 'p_ByazsJ_kxkIstC7' }
+        { publicKey: '3krxGDOOSr0d5cMvq' }
       )
       .then(() => {
         setSending(false)
